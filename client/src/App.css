@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0a0b;
+  --color-accent: #ff0033;
+  --color-muted: #8a8a93;
+  --color-surface: #1a1a1e;
+  --color-cardBg: #1a1a1e;
+
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
+
+  --color-text: #f5f5f5;
+  --color-line: rgb(255 255 255 / 0.1);
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+html.light {
+  --color-bg: #f6f6f8;
+  --color-surface: #ffffff;
+  --color-cardBg: #ffffff;
+  --color-muted: #6b6b76;
+  --color-text: #111114;
+  --color-line: rgb(0 0 0 / 0.1);
+}
+
+.Auth-wrapper {
+  max-width: 540px;
+  margin: auto;
+  width: 100%;
+}
+
+.auth-text {
+  position: relative;
+}
+
+.auth-text::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  left: 8px;
+  bottom: 15px;
+  animation: ColorAnimt 2s infinite;
+}
+
+@keyframes ColorAnimt {
+  0% {
+    background-color: var(--color-accent);
+  }
+  50% {
+    background-color: #31000a;
+  }
+  100% {
+    background-color: var(--color-accent);
+  }
+}
