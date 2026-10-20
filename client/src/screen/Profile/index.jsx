@@ -5,6 +5,7 @@ import { faUser, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { Input, Button, ConfirmDialog } from "../../components";
 import { useAuthStore } from "../../store/useAuthStore";
 import { useVideoStore } from "../../store/useVideoStore";
+import { useEffect } from "react";
 
 const Profile = () => {
   const navigate = useNavigate();
